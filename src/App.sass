@@ -1,0 +1,56 @@
+@import "sass/css-reset"
+@import "sass/vars"
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons')
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap')
+
+html, body
+  width: 100%
+  height: 100%
+  font-family: var(--main-font)
+  color: var(--text-color)
+  background-color: var(--bg-color)
+  -webkit-app-region: drag
+  -webkit-font-smoothing: antialiased
+
+.flex
+  flex: 1
+
+.clipping
+  +clipping_text
+
+.visuallyhidden
+  border: 0
+  clip: rect(0 0 0 0)
+  clip-path: inset(50%)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute
+  width: 1px
+  white-space: nowrap
+
+.wrapper
+  width: 100%
+  max-width: 970px
+  margin: 0 auto
+  padding: 0 15px
+
+#root
+  display: flex
+  flex-direction: column
+  height: 100%
+.container
+  flex: 1
+  height: 100%
+
+.badge
+  +size(15px)
+  border-radius: 50%
+  background-color: var(--primary-color)
+  color: var(--text-color)
+  display: flex
+  align-items: center
+  justify-content: center
+  font-size: 10px
+  line-height: 10px

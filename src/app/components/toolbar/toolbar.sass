@@ -1,0 +1,20 @@
+.toolbar
+  padding: 16px 0
+  border-bottom: 1px solid var(--separator-color)
+  &__wrap
+    display: flex
+    justify-content: space-between
+  &__nav
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &-link
+      position: relative
+      display: block
+      margin-left: 20px
+      &.active
+        color: var(--accent-color)
+  &__badge
+    position: absolute
+    top: -4px
+    right: -4px

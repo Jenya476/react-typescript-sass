@@ -4,18 +4,19 @@ import './product-card.sass';
 import {connect} from 'react-redux';
 import {bindActionCreators, Dispatch} from 'redux';
 import * as CartActionCreators from '../../actions/cart.action';
+import {AddProductAction} from '../../models/cart.model';
 
 interface ProductCardProps {
   product: Product;
+  addProduct: (product: Product) => AddProductAction;
 }
 
-class ProductCard extends Component<any> {
+class ProductCard extends Component<ProductCardProps> {
   product: Product;
 
   constructor(props: ProductCardProps) {
     super(props);
     this.product = props.product;
-    console.log('props', props);
   }
 
   render() {
@@ -32,5 +33,4 @@ function mapDispatchToProps(dispatch: Dispatch) {
   return bindActionCreators(CartActionCreators, dispatch);
 }
 
-// @ts-ignore
 export default connect(undefined, mapDispatchToProps)(ProductCard);
